@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const [open, setOPen]= useState(false)
     return (
-        <nav>
+        <nav className="p-2">
             <div className="md:hidden" onClick={()=> setOPen(!open) }>
              {
                 open=== true ? 
@@ -24,7 +24,7 @@ const Navbar = () => {
            
        
             </div>
-            <ul className="md:flex">
+            <ul className={`md:flex md:static md:justify-center bg-orange-500 absolute p-5  text-white duration-1000 ${open ? 'top-8': '-top-60'}`}>
             {
                 routes.map( route => <Links key={route.id} route={route}></Links> )
             }
