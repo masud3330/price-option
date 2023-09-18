@@ -41,12 +41,17 @@ const PriceOptions = () => {
      
       
     return (
-        <div className="grid md:grid-cols-3 gap-4 mx-12">
+        <div className="mx-12"> 
+            <h2 className='text-4xl'>Best prices in the town</h2>
+        <div className="grid md:grid-cols-3 gap-4 ">
+            
             {
                 gym_members.map(member => <PriceOption key={member.member_id}  member={member}></PriceOption>)
             }
             
         </div>
+        </div>
+        
     );
 };
 
